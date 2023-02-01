@@ -2,8 +2,13 @@
 #include <string.h>
 #define MAX_LEN 100
 
-char plain[26] = "abcdefghijklmnopqrstuvwxyz";
-char cipher[26] = "zyxwvutsrqponmlkjihgfedcba";
+char plain[26];
+char cipher[26];
+
+void init() {
+    strcpy(plain, "abcdefghijklmnopqrstuvwxyz");
+    strcpy(cipher, "zyxwvutsrqponmlkjihgfedcba");
+}
 
 void encrypt(char *plaintext, char *ciphertext) {
     int i, len = strlen(plaintext);
@@ -38,6 +43,7 @@ void decrypt(char *ciphertext, char *plaintext) {
 }
 
 int main() {
+    init();
     char plaintext[MAX_LEN], ciphertext[MAX_LEN];
     printf("Enter a plaintext message: ");
     scanf("%s", plaintext);
