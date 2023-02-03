@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+
+int main() 
+{ 
+    int i, j; 
+    long double num = 112; 
+  
+    for (i=0; i<=num; i++) 
+    { 
+        for (j=0; j<=num; j++) 
+        { 
+            if (pow(2, i) * pow(2, j) == pow(2,num)) 
+            { 
+                printf("The possible keys for Playfair cipher are :\n"); 
+                printf("2^%d * 2^%d = 2^%d\n", i, j, (int)num); 
+            } 
+        } 
+    } 
+    return 0; 
+}
